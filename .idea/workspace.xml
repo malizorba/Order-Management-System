@@ -1,15 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="" />
+    <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/DTO/Request/InventoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/DTO/Response/InventoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Entity/InventoryItemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Repository/InventoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/DTO/Request/OrderRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/DTO/Response/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Entity/OrderEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Entity/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Entity/OutboxEventEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Exception/BusinessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Exception/ErrorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/OrderServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Repository/OutBoxRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Service/IOrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Service/IOutboxPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Service/Implementation/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/java/com/example/orderservice/Service/Implementation/OutboxPublisherImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order-Service/order-service/src/main/resources/db/migration/V1__create_tables.sql" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2xS7fcUzs2rMzLqHgWSbXqiWl1k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,13 +80,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.OrderServiceApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Downloads/Order Management System/Order-Service/order-service",
+    "last_opened_file_path": "C:/Users/User/Downloads/Order Management System/inventory-service/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/User/Downloads/Order Management System/common/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice" />
+      <recent name="C:\Users\User\Downloads\Order Management System\order-service\src\main\resources" />
+      <recent name="C:\Users\User\Downloads\Order Management System\order-service\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.inventoryservice" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -41,10 +140,23 @@
       <option name="presentableId" value="Default" />
       <updated>1747919725096</updated>
       <workItem from="1747919727955" duration="53000" />
+      <workItem from="1747933139551" duration="3681000" />
+      <workItem from="1747989117108" duration="4667000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
