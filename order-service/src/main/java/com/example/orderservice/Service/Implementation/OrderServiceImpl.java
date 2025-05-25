@@ -1,25 +1,27 @@
 package com.example.orderservice.Service.Implementation;
 
+import com.example.common.Event.EventFactory;
+import com.example.common.OutboxEvent.Constants;
+import com.example.common.OutboxEvent.Repository.OutboxEventRepository;
 import com.example.orderservice.DTO.Request.OrderRequest;
 import com.example.orderservice.DTO.Response.OrderResponse;
 import com.example.orderservice.Entity.OrderEntity;
 import com.example.orderservice.Entity.OrderStatus;
-import com.example.orderservice.Entity.OutboxEventEntity;
+import com.example.common.Entity.OutboxEventEntity;
 import com.example.orderservice.Repository.OrderRepository;
-import com.example.orderservice.Repository.OutBoxRepository;
 import com.example.orderservice.Service.IOrderService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import com.example.Exception.BusinessException;
-import com.example.Exception.ErrorCode;
+import com.example.common.Exception.BusinessException;
+import com.example.common.Exception.ErrorCode;
 
 @Component
 @RequiredArgsConstructor
 public class OrderServiceImpl implements IOrderService {
 
     private final OrderRepository orderRepository;
-    private final OutBoxRepository outBoxRepository;
+    private final OutboxEventRepository outBoxRepository;
     private final ObjectMapper objectMapper;
 
     public OrderResponse placeOrder(OrderRequest request) {
@@ -33,22 +35,15 @@ public class OrderServiceImpl implements IOrderService {
 
         orderRepository.save(order);
 
-        try {
-            String payload = objectMapper.writeValueAsString(order);
-
-            OutboxEventEntity event = OutboxEventEntity.builder()
-                    .aggregateId(String.valueOf(order.getId()))
-                    .aggregateType("Order")
-                    .eventType("OrderCreated")
-                    .payload(payload)
-                    .sent(false)
-                    .build();
+        OutboxEventEntity event = EventFactory.createOutboxEvent(
+                Constants.AggregateType.ORDER,
+                Constants.EventType.ORDER_CREATED,
+                String.valueOf(order.getId()),
+                order
+        );
 
             outBoxRepository.save(event);
 
-        } catch (Exception e) {
-            throw new BusinessException(ErrorCode.INTERNAL_ERROR);
-        }
 
         return OrderResponse.builder()
                 .orderId(String.valueOf(order.getId()))

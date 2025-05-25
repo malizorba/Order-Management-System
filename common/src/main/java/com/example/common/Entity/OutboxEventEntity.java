@@ -1,6 +1,5 @@
-package com.example.orderservice.Entity;
+package com.example.common.Entity;
 
-import com.example.Entity.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;

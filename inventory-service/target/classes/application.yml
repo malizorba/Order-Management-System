@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventory-db
-    username: payment_user
-    password: payment_pass
+    url: jdbc:postgresql://localhost:5433/inventory_db
+    username: inventory_user
+    password: inventory_pass
 
   jpa:
     hibernate:

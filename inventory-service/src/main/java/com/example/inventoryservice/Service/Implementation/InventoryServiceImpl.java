@@ -1,13 +1,15 @@
 package com.example.inventoryservice.Service.Implementation;
 
-import com.example.Event.StockAvailableEvent;
-import com.example.Exception.BusinessException;
-import com.example.Exception.ErrorCode;
+import com.example.common.Entity.OutboxEventEntity;
+import com.example.common.Event.EventFactory;
+import com.example.common.Event.StockAvailableEvent;
+import com.example.common.Exception.BusinessException;
+import com.example.common.Exception.ErrorCode;
+import com.example.common.OutboxEvent.Constants;
+import com.example.common.OutboxEvent.Repository.OutboxEventRepository;
 import com.example.inventoryservice.DTO.Request.InventoryRequest;
 import com.example.inventoryservice.DTO.Response.InventoryResponse;
 import com.example.inventoryservice.Entity.InventoryItemEntity;
-import com.example.inventoryservice.Exception.BusinessException;
-import com.example.inventoryservice.Exception.ErrorCode;
 import com.example.inventoryservice.Repository.InventoryRepository;
 import com.example.inventoryservice.Service.InventoryService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -27,17 +29,18 @@ import java.util.UUID;
 public class InventoryServiceImpl implements InventoryService {
 
     private final InventoryRepository inventoryRepository;
-    private final KafkaTemplate<String, String> kafkaTemplate;
+    private final OutboxEventRepository outBoxRepository;
     private final ObjectMapper objectMapper;
+
 
     @Override
     @Transactional(readOnly = true)
     public InventoryResponse checkStock(InventoryRequest request) {
-        InventoryItemEntity item=inventoryRepository.findByProductId(request.getProductId())
+        InventoryItemEntity item = inventoryRepository.findByProductId(request.getProductId())
                 .orElseThrow(() -> new BusinessException(ErrorCode.STOCK_NOT_FOUND));
 
-        boolean inStock=item.getStockQuantity() >= request.getQuantity();
-        InventoryResponse response=InventoryResponse.builder().
+        boolean inStock = item.getStockQuantity() >= request.getQuantity();
+        InventoryResponse response = InventoryResponse.builder().
                 productId(item.getProductId())
                 .inStock(inStock)
                 .build();
@@ -47,18 +50,19 @@ public class InventoryServiceImpl implements InventoryService {
     @Override
     @Transactional
     public void decreaseStock(InventoryRequest request) {
-        InventoryItemEntity item=inventoryRepository.findByProductId(request.getProductId())
+        InventoryItemEntity item = inventoryRepository.findByProductId(request.getProductId())
                 .orElseThrow(() -> new BusinessException(ErrorCode.STOCK_NOT_FOUND));
 
         if (item.getStockQuantity() < request.getQuantity()) {
             throw new BusinessException(ErrorCode.INSUFFICIENT_STOCK);
 
         }
-        int oldQuantity=item.getStockQuantity();
-        item.setStockQuantity(oldQuantity-request.getQuantity());
+        int oldQuantity = item.getStockQuantity();
+        item.setStockQuantity(oldQuantity - request.getQuantity());
         log.info("Stok azaltıldı: Ürün={}, Eski={}, Yeni={}", request.getProductId(), oldQuantity, item.getStockQuantity());
 
     }
+
     @Transactional
     public void updateStock(UUID productId, int quantityToAdd) {
         InventoryItemEntity item = inventoryRepository.findByProductId(productId)
@@ -74,15 +78,20 @@ public class InventoryServiceImpl implements InventoryService {
 
         log.info("Stok güncellendi: {} → {}", oldQuantity, newQuantity);
     }
-    private void sendStockAvailableEvent(UUID productId) {
-        try {
-            StockAvailableEvent event = new StockAvailableEvent(productId, Instant.now());
-            String payload = objectMapper.writeValueAsString(event);
 
-            kafkaTemplate.send("stock-notify", productId.toString(), payload);
-            log.info("Stock notify Kafka'ya gönderildi: {}", productId);
-        } catch (JsonProcessingException e) {
-            log.error("StockAvailableEvent serileştirme hatası", e);
-        }
+    private void sendStockAvailableEvent(UUID productId) {
+
+        OutboxEventEntity outboxEvent = EventFactory.createOutboxEvent(
+                Constants.AggregateType.INVENTORY,
+                Constants.EventType.STOCK_AVAILABLE,
+                productId.toString(),
+                new StockAvailableEvent(productId, Instant.now())
+        );
+
+        outBoxRepository.save(outboxEvent);
+
+        log.info("Outbox'a yazıldı: {}", productId);
+
     }
+
 }

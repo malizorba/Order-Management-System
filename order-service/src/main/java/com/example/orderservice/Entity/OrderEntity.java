@@ -1,6 +1,6 @@
 package com.example.orderservice.Entity;
 
-import com.example.Entity.BaseEntity;
+import com.example.common.Entity.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

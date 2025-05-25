@@ -1,6 +1,6 @@
 package com.example.inventoryservice.Entity;
 
-import com.example.Entity.BaseEntity;
+import com.example.common.Entity.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

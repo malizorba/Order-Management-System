@@ -1,8 +1,10 @@
-package com.example.orderservice.Service.Implementation;
+package com.example.common.OutboxEvent.Service.Implementation;
 
-import com.example.orderservice.Entity.OutboxEventEntity;
-import com.example.orderservice.Repository.OutBoxRepository;
+import com.example.common.Entity.OutboxEventEntity;
+import com.example.common.OutboxEvent.Service.IOutboxService;
 
+
+import com.example.common.OutboxEvent.Repository.OutboxEventRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -11,18 +13,21 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class OutboxPublisherImpl {
-    private final OutBoxRepository outboxEventRepository;
+public class OutboxServiceImpl implements IOutboxService {
+    private final OutboxEventRepository outboxEventRepository;
     private final KafkaTemplate<String, String> kafkaTemplate;
 
+    @Override
     @Scheduled(fixedDelay = 5000) // 5 saniyede bir çalışır
     @Transactional
-    public void publishPendingEvents() {
+    public void
+    publishPendingEvents() {
         List<OutboxEventEntity> events = outboxEventRepository.findBySentFalse();
 
         for (OutboxEventEntity event : events) {
@@ -36,4 +41,14 @@ public class OutboxPublisherImpl {
             }
         }
     }
+
+    @Override
+    @Scheduled(cron = "0 0 2 * * *")
+    public void cleanOldSentEvents() {
+        Instant threshold = Instant.now().minus(1, ChronoUnit.DAYS); // 1 günden eski gönderilenler silinsin
+        int deleted = outboxEventRepository.deleteBySentTrueAndCreatedAtBefore(threshold);
+        log.info("Outbox cleanup: {} kayıt silindi", deleted);
+    }
+
+
 }

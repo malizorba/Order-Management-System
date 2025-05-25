@@ -1,4 +1,4 @@
-package com.example.Event;
+package com.example.common.Event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
