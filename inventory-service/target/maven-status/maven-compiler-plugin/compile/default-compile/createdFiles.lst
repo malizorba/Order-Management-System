@@ -1,0 +1,10 @@
+com\example\inventoryservice\Service\InventoryService.class
+com\example\inventoryservice\DTO\Request\InventoryRequest.class
+com\example\inventoryservice\Controller\InventoryController.class
+com\example\inventoryservice\DTO\Response\InventoryResponse$InventoryResponseBuilder.class
+com\example\inventoryservice\InventoryServiceApplication.class
+com\example\inventoryservice\Service\Implementation\InventoryServiceImpl.class
+com\example\inventoryservice\DTO\Response\InventoryResponse.class
+com\example\inventoryservice\Entity\InventoryItemEntity.class
+com\example\inventoryservice\Repository\InventoryRepository.class
+com\example\inventoryservice\Entity\InventoryItemEntity$InventoryItemEntityBuilder.class

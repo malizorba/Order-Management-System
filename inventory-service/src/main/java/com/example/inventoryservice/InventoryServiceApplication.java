@@ -11,10 +11,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
         "com.example.common"
 })
 @EnableScheduling
-@EntityScan(basePackages = {"package com.example.Entity,com.example.inventoryservice.Entity"})
+@EntityScan(basePackages = {"com.example.common.Entity,com.example.inventoryservice.Entity"})
 @EnableJpaRepositories(basePackages = {
-        "com.example.common.OutboxEvent.Repository;",
-        "com.example.inventoryservice.Repository;" // kendi servis repo paketlerin
+        "com.example.common.OutboxEvent.Repository",
+        "com.example.inventoryservice.Repository" // kendi servis repo paketlerin
 })
 public class InventoryServiceApplication {
     public static void main(String[] args) {

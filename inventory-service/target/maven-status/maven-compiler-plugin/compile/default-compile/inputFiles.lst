@@ -3,9 +3,6 @@ C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\
 C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\DTO\Request\InventoryRequest.java
 C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Service\Implementation\InventoryServiceImpl.java
 C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\DTO\Response\InventoryResponse.java
-C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Exception\ErrorCode.java
 C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Repository\InventoryRepository.java
-C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Entity\BaseEntity.java
-C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Exception\GlobalExceptionHandler.java
+C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Controller\InventoryController.java
 C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Entity\InventoryItemEntity.java
-C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice\Exception\BusinessException.java

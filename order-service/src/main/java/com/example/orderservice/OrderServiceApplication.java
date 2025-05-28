@@ -13,8 +13,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EntityScan(basePackages = {"package com.example.Entity,package com.example.orderservice.Entity"})
 @EnableJpaRepositories(basePackages = {
-        "com.example.common.OutboxEvent.Repository;",
-        "com.example.orderservice.Repository;" // kendi servis repo paketlerin
+        "com.example.common.OutboxEvent.Repository",
+        "com.example.orderservice.Repository" // kendi servis repo paketlerin
 })
 public class OrderServiceApplication {
     public static void main(String[] args) {
