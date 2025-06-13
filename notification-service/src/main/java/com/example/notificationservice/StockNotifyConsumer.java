@@ -15,7 +15,7 @@ public class StockNotifyConsumer {
     private final ObjectMapper objectMapper;
 
 
-    @KafkaListener(topics = "stock-notify", groupId = "notification-service")
+    @KafkaListener(topics = "stock-available", groupId = "notification-service")
     public void consume(String message) {
         try {
             StockAvailableEvent event = objectMapper.readValue(message, StockAvailableEvent.class);

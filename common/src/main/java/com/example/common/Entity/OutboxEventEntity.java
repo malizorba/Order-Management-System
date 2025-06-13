@@ -16,6 +16,5 @@ public class OutboxEventEntity extends BaseEntity {
     private String aggregateType;
     private String eventType;
     private String payload;
-
     private boolean sent;
 }

@@ -5,17 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 import java.util.UUID;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class OrderResponse {
-    private UUID orderId;
-    private String customerId;
-    private Double totalAmount;
-    private String status;
-    private List<OrderItemResponse> items;
+public class OrderItemResponse {
+    private UUID productId;
+    private Integer quantity;
 }

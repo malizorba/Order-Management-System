@@ -22,4 +22,7 @@ public class InventoryItemEntity extends BaseEntity {
 
     @Column(nullable = false)
     private Integer stockQuantity;
+
+    @Column(nullable = false)
+    private int reservedQuantity = 0;
 }

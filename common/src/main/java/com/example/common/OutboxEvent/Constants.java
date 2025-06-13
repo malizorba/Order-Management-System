@@ -28,7 +28,10 @@ public class Constants {
         ORDER_CREATED("ORDER_CREATED"),
         PAYMENT_PROCESSED("PAYMENT_PROCESSED"),
         STOCK_AVAILABLE("STOCK_AVAILABLE"),
-        PRODUCT_ADDED("PRODUCT_ADDED");
+        PRODUCT_ADDED("PRODUCT_ADDED"),
+        ORDER_FAILED("ORDER_FAILED"),
+        ORDER_VALIDATED("ORDER_VALIDATED"),
+        ORDER_PAID("ORDER_PAID");
 
 
         private final String value;

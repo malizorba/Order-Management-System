@@ -5,46 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/StockNotifyConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/main/java/com/example/orderservice/DTO/Request/OrderItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/main/java/com/example/orderservice/DTO/Response/OrderItemResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/main/java/com/example/orderservice/Entity/OrderItemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/OrderCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/OrderValidatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Entity/ReservationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Repository/ReservationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/db/migration/V2__update_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/Service/IPaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/Service/Implementation/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Order-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Entity/OutboxEventEntity$OutboxEventEntityBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Entity/OutboxEventEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Event/StockAvailableEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Exception/BusinessException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Exception/ErrorCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/Exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/Entity/OutboxEventEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Entity/OutboxEventEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/EventFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/EventFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Entity/InventoryItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Entity/InventoryItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Repository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Entity/InventoryItemEntity$InventoryItemEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Entity/InventoryItemEntity$InventoryItemEntityBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Entity/InventoryItemEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Entity/InventoryItemEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/InventoryServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/InventoryServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Repository/OutBoxRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Service/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Service/InventoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/db/migration/V1__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/db/migration/V1__create_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/OrderEntity$OrderEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/OrderEntity$OrderEntityBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/OrderEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/OrderEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/OutboxEventEntity$OutboxEventEntityBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Entity/OutboxEventEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Exception/BusinessException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Exception/ErrorCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/OrderServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/OrderServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Repository/OutBoxRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Service/IOutboxPublisher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Service/Implementation/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Service/Implementation/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/Service/Implementation/OutboxPublisherImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/db/migration/V1__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/db/migration/V1__create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Repository/InventoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/com/example/inventoryservice/Repository/InventoryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/StockNotifyConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/StockNotifyConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/DTO/Request/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/DTO/Request/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/DTO/Response/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/DTO/Response/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/Entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/Entity/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/Service/Implementation/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/Service/Implementation/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -103,8 +98,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/Downloads/Order Management System/notification-service/src/main/java/com/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/Downloads/Order Management System/payment-service/src/main/java/com/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
@@ -119,6 +114,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Downloads\Order Management System" />
       <recent name="C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice" />
       <recent name="C:\Users\User\Downloads\Order Management System\order-service\src\main\resources" />
       <recent name="C:\Users\User\Downloads\Order Management System\order-service\src\main\java" />
@@ -144,7 +140,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication">
+  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="common" />
       <method v="2">
@@ -176,19 +172,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="notification-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.NotificationServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.orderservice.OrderServiceApplication" />
@@ -199,7 +182,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
-        <item itemvalue="Spring Boot.NotificationServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +207,11 @@
       <workItem from="1748001705193" duration="7575000" />
       <workItem from="1748174547407" duration="17098000" />
       <workItem from="1748344008648" duration="9241000" />
-      <workItem from="1748441657270" duration="1076000" />
+      <workItem from="1748441657270" duration="9273000" />
+      <workItem from="1748504266292" duration="18659000" />
+      <workItem from="1749647685657" duration="4508000" />
+      <workItem from="1749756983090" duration="5012000" />
+      <workItem from="1749845833545" duration="1970000" />
     </task>
     <servers />
   </component>

@@ -27,4 +27,5 @@ public class EventFactory {
             throw new RuntimeException("Payload JSON dönüşüm hatası", e);
         }
     }
+
 }

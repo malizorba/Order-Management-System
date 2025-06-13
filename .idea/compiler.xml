@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="order-service" />
         <module name="inventory-service" />
+        <module name="payment-service" />
         <module name="common" />
         <module name="notification-service" />
       </profile>
