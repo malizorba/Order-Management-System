@@ -14,5 +14,7 @@ public interface ReservationRepository extends JpaRepository<ReservationEntity, 
 
     List<ReservationEntity> findByExpiresAtBefore(Instant time);
 
+    List<ReservationEntity> findByOrderId(UUID orderId);
+
 
 }

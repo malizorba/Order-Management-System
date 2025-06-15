@@ -10,6 +10,7 @@
         <module name="order-service" />
         <module name="inventory-service" />
         <module name="payment-service" />
+        <module name="user-service" />
         <module name="common" />
         <module name="notification-service" />
       </profile>

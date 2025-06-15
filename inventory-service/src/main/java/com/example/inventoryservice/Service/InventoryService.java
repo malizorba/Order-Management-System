@@ -20,5 +20,6 @@ public interface InventoryService {
 
     void releaseExpiredReservations();
 
-    void handleOrderCreated(String message) throws JsonProcessingException;
+
+    void releaseReservations(UUID orderId);
 }

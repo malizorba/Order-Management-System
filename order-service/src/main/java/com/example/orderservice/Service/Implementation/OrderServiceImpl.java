@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import com.example.common.Exception.BusinessException;
 import com.example.common.Exception.ErrorCode;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
@@ -31,6 +32,21 @@ public class OrderServiceImpl implements IOrderService {
     private final OutboxEventRepository outBoxRepository;
     private final ObjectMapper objectMapper;
 
+    @Override
+    @Transactional
+    public void cancelOrder(UUID orderId) {
+        OrderEntity order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new BusinessException(ErrorCode.ORDER_NOT_FOUND));
+        order.setOrderStatus(OrderStatus.FAILED);
+    }
+    @Override
+    @Transactional
+    public void completeOrder(UUID orderId) {
+        OrderEntity order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new BusinessException(ErrorCode.ORDER_NOT_FOUND));
+        order.setOrderStatus(OrderStatus.COMPLETED);
+    }
+    @Override
     public OrderResponse placeOrder(OrderRequest request) {
 
 

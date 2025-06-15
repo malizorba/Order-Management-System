@@ -10,6 +10,7 @@ import com.example.common.OutboxEvent.Service.IOutboxService;
 import com.example.common.OutboxEvent.Repository.OutboxEventRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -26,6 +27,7 @@ import java.util.UUID;
 public class OutboxServiceImpl implements IOutboxService {
     private final OutboxEventRepository outboxEventRepository;
     private final KafkaTemplate<String, String> kafkaTemplate;
+
 
     @Override
     @Scheduled(fixedDelay = 5000) // 5 saniyede bir çalışır

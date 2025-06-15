@@ -26,6 +26,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -71,6 +72,8 @@ public class InventoryServiceImpl implements InventoryService {
 
         item.setStockQuantity(item.getStockQuantity() - request.getQuantity());
         item.setReservedQuantity(item.getReservedQuantity() - request.getQuantity());
+
+
 
         log.info("Stok azaltıldı: Ürün={}, Miktar={}, Yeni Stok={}, Yeni Rezerve={}",
                 request.getProductId(), request.getQuantity(), item.getStockQuantity(), item.getReservedQuantity());
@@ -169,6 +172,33 @@ public class InventoryServiceImpl implements InventoryService {
                         reservation.getProductId(), reservation.getReservedQuantity());
             } catch (Exception ex) {
                 log.error("‼️ Rezervasyon serbest bırakılırken hata oluştu: reservationId={}", reservation.getId(), ex);
+                TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            }
+        }
+    }
+
+    @Override
+    @Transactional
+    public void releaseReservations(UUID orderId) {
+        List<ReservationEntity> reservations = reservationRepository.findByOrderId(orderId);
+
+        for (ReservationEntity reservation : reservations) {
+            try {
+                InventoryItemEntity item = inventoryRepository
+                        .findByProductIdForUpdate(reservation.getProductId())
+                        .orElseThrow(() -> new BusinessException(ErrorCode.STOCK_NOT_FOUND));
+
+                int currentReserved = item.getReservedQuantity();
+                item.setReservedQuantity(Math.max(0, currentReserved - reservation.getReservedQuantity()));
+
+                reservationRepository.delete(reservation);
+                inventoryRepository.save(item);
+
+                log.info("Rezervasyon serbest bırakıldı: productId={}, quantity={}",
+                        reservation.getProductId(), reservation.getReservedQuantity());
+            } catch (Exception ex) {
+                log.error("Rezervasyon serbest bırakılırken hata oluştu: orderId={}", orderId, ex);
+                TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             }
         }
     }
@@ -190,12 +220,7 @@ public class InventoryServiceImpl implements InventoryService {
         log.info("Outbox'a yazıldı: {}", productId);
 
     }
-    @Override
-    @KafkaListener(topics = "order_created", groupId = "inventory-service")
-    public void handleOrderCreated(String message) throws JsonProcessingException {
-        OrderCreatedEvent event = objectMapper.readValue(message, OrderCreatedEvent.class);
-        reserveStock(event);
-    }
+
 
 
 }

@@ -31,6 +31,7 @@ public class Constants {
         PRODUCT_ADDED("PRODUCT_ADDED"),
         ORDER_FAILED("ORDER_FAILED"),
         ORDER_VALIDATED("ORDER_VALIDATED"),
+        PAYMENT_FAILED("PAYMENT_FAILED"),
         ORDER_PAID("ORDER_PAID");
 
 
