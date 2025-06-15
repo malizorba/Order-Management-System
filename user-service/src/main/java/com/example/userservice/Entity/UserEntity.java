@@ -1,9 +1,8 @@
 package com.example.userservice.Entity;
 
 import com.example.common.Entity.BaseEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.example.userservice.DTO.UserRole;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,6 +27,6 @@ public class UserEntity extends BaseEntity {
     @Column
     private String phoneNumber;
 
-    @Column
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
 }

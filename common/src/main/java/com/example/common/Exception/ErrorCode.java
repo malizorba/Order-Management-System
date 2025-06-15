@@ -9,7 +9,10 @@ public enum ErrorCode {
     INTERNAL_ERROR("GENERIC_001", "Beklenmeyen bir hata oluştu"),
     STOCK_NOT_FOUND("STOCK-001", "Stock item not found"),
     INSUFFICIENT_STOCK("STOCK-002", "Not enough stock available"),
-    INVALID_REQUEST("STOCK-003", "Invalid stock request");
+    INVALID_REQUEST("STOCK-003", "Invalid stock request"),
+    EMAIL_ALREADY_EXISTS("USER_001", "Email already exists"),
+    USER_NOT_FOUND("USER_002", "User not found"),
+    INVALID_CREDENTIALS("USER_003", "Invalid credentials");
 
     private final String code;
     private final String message;

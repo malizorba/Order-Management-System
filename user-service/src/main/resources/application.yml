@@ -1,0 +1,4 @@
+security:
+  jwt:
+    secret: my-very-secure-secret-key-which-is-long-enough
+    expiration-ms: 86400000 # 1 gün = 24 * 60 * 60 * 1000 ms
