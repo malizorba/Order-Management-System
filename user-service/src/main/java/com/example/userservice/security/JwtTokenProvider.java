@@ -37,6 +37,17 @@ public class JwtTokenProvider {
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
+    public String getEmailFromToken(String token) {
+        try {
+            Claims claims = Jwts.parser()
+                    .setSigningKey(key) // secretKey burada tanımlı olmalı
+                    .parseClaimsJws(token)
+                    .getBody();
+            return claims.getSubject(); // Email genelde subject olarak saklanır
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Invalid token");
+        }
+    }
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);

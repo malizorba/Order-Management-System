@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.userproto";
+option java_outer_classname = "UserServiceProto";
+
+package user;
+
+import "google/protobuf/empty.proto";
+
+service UserService {
+  rpc GetUserByToken(google.protobuf.Empty) returns (UserResponse);
+}
+
+message UserRequest {
+  string email = 1;
+}
+enum NotificationChannel {
+  EMAIL = 0;
+  SMS = 1;
+}
+
+message UserResponse {
+  string email = 1;
+  string fullName = 2;
+  string phoneNumber = 3;
+  NotificationChannel preferredChannel = 4;
+}

@@ -29,4 +29,8 @@ public class UserEntity extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     private UserRole role;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private NotificationChannel preferredChannel = NotificationChannel.EMAIL;
 }

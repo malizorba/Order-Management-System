@@ -25,3 +25,8 @@ spring:
           auth: true
           starttls:
             enable: true
+  grpc:
+    client:
+      user-service:
+        address: static://localhost:9090
+        negotiationType: plaintext

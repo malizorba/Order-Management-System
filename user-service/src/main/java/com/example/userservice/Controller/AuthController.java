@@ -1,5 +1,6 @@
 package com.example.userservice.Controller;
 
+import com.example.userservice.DTO.Request.AuthRequest;
 import com.example.userservice.DTO.Response.AuthResponse;
 import com.example.userservice.DTO.UserDto;
 import com.example.userservice.Service.IUserService;
@@ -34,3 +35,4 @@ public class AuthController {
         return ResponseEntity.ok(user);
     }
 }
+
