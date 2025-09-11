@@ -5,67 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Controller/FavoriteProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/DTO/Request/FavoriteProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/DTO/Response/FavoriteProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Entity/FavoriteProductEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Repository/FavoritePRoductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Service/IFavoriteProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Service/Implementation/FavoriteProductImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/config/GrpcSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__create_tables.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/test/java/com/example/orderservice/Service/Implementation/OrderServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/src/main/proto/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/src/main/proto/UserService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/UserService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$AsyncService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$AsyncService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$MethodHandlers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceBaseDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceBlockingStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceFileDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceFutureStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceImplBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceMethodDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc$UserServiceStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceGrpc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceProto.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/classes/com/example/userproto/UserServiceProto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/common-proto-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/common-proto-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/generated-sources/protobuf/grpc-java/com/example/userproto/UserServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/generated-sources/protobuf/grpc-java/com/example/userproto/UserServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/generated-sources/protobuf/java/com/example/userproto/UserServiceProto.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/generated-sources/protobuf/java/com/example/userproto/UserServiceProto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-proto/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-proto/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/EventFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/EventFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/StockAvailableEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Event/StockAvailableEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/Exception/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Exception/BusinessException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/Exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/Exception/ErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/common/Event/EventFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/example/common/Event/EventFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/common/Exception/BusinessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/example/common/Exception/BusinessException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/common/Exception/ErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/example/common/Exception/ErrorCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/StockNotifyConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/StockNotifyConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/service/grpc/GrpcClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/service/grpc/GrpcClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/service/grpc/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/service/grpc/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/service/grpc/SmsNotificationSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/service/grpc/SmsNotificationSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/DTO/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/DTO/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Service/Implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Service/Implementation/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Service/grpc/UserGrpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/Service/grpc/UserGrpcService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/security/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +20,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -103,49 +45,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.common [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.common-proto [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.inventory-service [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.notification-service [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.order-management-system [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.order-management-system [flyway:repair].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-service [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServiceApplication (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Downloads/Order Management System/inventory-service/pom.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/Downloads/Order Management System/common-proto/src/main/java/com/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.OrderServiceImplTest.cancelOrder_orderNotFound.executor": "Run",
+    "JUnit.OrderServiceImplTest.cancelOrder_success.executor": "Run",
+    "JUnit.OrderServiceImplTest.completeOrder_notFound.executor": "Run",
+    "JUnit.OrderServiceImplTest.completeOrder_success.executor": "Run",
+    "JUnit.OrderServiceImplTest.executor": "Coverage",
+    "JUnit.OrderServiceImplTest.placeOrder.executor": "Run",
+    "Maven.common [clean,install].executor": "Run",
+    "Maven.common-proto [clean,install].executor": "Run",
+    "Maven.inventory-service [clean,install].executor": "Run",
+    "Maven.notification-service [clean,install].executor": "Run",
+    "Maven.order-management-system [clean,install].executor": "Run",
+    "Maven.order-management-system [flyway:repair].executor": "Run",
+    "Maven.user-service [clean,install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.InventoryServiceApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication (1).executor": "Debug",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Downloads/Order Management System/inventory-service/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/User/Downloads/Order Management System/common-proto/src/main/java/com/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Downloads\Order Management System\common-proto\src\main" />
@@ -153,6 +104,12 @@
       <recent name="C:\Users\User\Downloads\Order Management System" />
       <recent name="C:\Users\User\Downloads\Order Management System\inventory-service\src\main\java\com\example\inventoryservice" />
       <recent name="C:\Users\User\Downloads\Order Management System\order-service\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.orderservice.Service.Implementation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.inventoryservice" />
@@ -175,23 +132,89 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
-    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="inventory-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.inventoryservice.InventoryServiceApplication" />
+  <component name="RunManager" selected="JUnit.OrderServiceImplTest">
+    <configuration name="OrderServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificationServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="notification-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.notificationservice.NotificationServiceApplication" />
+    <configuration name="OrderServiceImplTest.cancelOrder_orderNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.notificationservice.*" />
+          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
+      <option name="METHOD_NAME" value="cancelOrder_orderNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceImplTest.cancelOrder_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
+      <option name="METHOD_NAME" value="cancelOrder_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceImplTest.completeOrder_notFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
+      <option name="METHOD_NAME" value="completeOrder_notFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceImplTest.completeOrder_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
+      <option name="METHOD_NAME" value="completeOrder_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.inventoryservice.InventoryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,7 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
+        <item itemvalue="JUnit.OrderServiceImplTest" />
+        <item itemvalue="JUnit.OrderServiceImplTest.cancelOrder_orderNotFound" />
+        <item itemvalue="JUnit.OrderServiceImplTest.cancelOrder_success" />
+        <item itemvalue="JUnit.OrderServiceImplTest.completeOrder_notFound" />
+        <item itemvalue="JUnit.OrderServiceImplTest.completeOrder_success" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +287,7 @@
       <workItem from="1756832568164" duration="7635000" />
       <workItem from="1756916132751" duration="6824000" />
       <workItem from="1756977222934" duration="8928000" />
-      <workItem from="1757574073204" duration="595000" />
+      <workItem from="1757574073204" duration="13505000" />
     </task>
     <servers />
   </component>
@@ -298,5 +325,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Order_Management_System$OrderServiceImplTest.ic" NAME="OrderServiceImplTest Coverage Results" MODIFIED="1757619333214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.example.orderservice.Service.Implementation.*</FILTER>
+    </SUITE>
   </component>
 </project>
