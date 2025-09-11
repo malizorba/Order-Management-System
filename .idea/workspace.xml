@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Order-Service/src/test/java/com/example/orderservice/Service/Implementation/OrderServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/test-classes/com/example/orderservice/Service/Implementation/OrderServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/test-classes/com/example/orderservice/Service/Implementation/OrderServiceImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ListenerImplementationTest.consume_invalidJson_shouldNotCrash.executor": "Run",
+    "JUnit.ListenerImplementationTest.consume_orderPaymentEvent_success.executor": "Run",
+    "JUnit.ListenerImplementationTest.consume_paymentFailedEvent_success.executor": "Debug",
+    "JUnit.ListenerImplementationTest.executor": "Coverage",
     "JUnit.OrderServiceImplTest.cancelOrder_orderNotFound.executor": "Run",
     "JUnit.OrderServiceImplTest.cancelOrder_success.executor": "Run",
     "JUnit.OrderServiceImplTest.completeOrder_notFound.executor": "Run",
@@ -75,6 +80,7 @@
     "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Downloads/Order Management System/inventory-service/pom.xml",
@@ -109,6 +115,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.orderservice.Listener.Implementation" />
       <recent name="com.example.orderservice.Service.Implementation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -132,7 +139,70 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderServiceImplTest">
+  <component name="RunManager" selected="JUnit.ListenerImplementationTest">
+    <configuration name="ListenerImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Listener.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Listener.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Listener.Implementation.ListenerImplementationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListenerImplementationTest.consume_invalidJson_shouldNotCrash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Listener.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Listener.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Listener.Implementation.ListenerImplementationTest" />
+      <option name="METHOD_NAME" value="consume_invalidJson_shouldNotCrash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListenerImplementationTest.consume_orderPaymentEvent_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Listener.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Listener.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Listener.Implementation.ListenerImplementationTest" />
+      <option name="METHOD_NAME" value="consume_orderPaymentEvent_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListenerImplementationTest.consume_paymentFailedEvent_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderservice.Listener.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Listener.Implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Listener.Implementation.ListenerImplementationTest" />
+      <option name="METHOD_NAME" value="consume_paymentFailedEvent_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
@@ -144,70 +214,6 @@
       <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
       <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceImplTest.cancelOrder_orderNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
-      <option name="METHOD_NAME" value="cancelOrder_orderNotFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceImplTest.cancelOrder_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
-      <option name="METHOD_NAME" value="cancelOrder_success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceImplTest.completeOrder_notFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
-      <option name="METHOD_NAME" value="completeOrder_notFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceImplTest.completeOrder_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
-      <option name="METHOD_NAME" value="completeOrder_success" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -242,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ListenerImplementationTest" />
+        <item itemvalue="JUnit.ListenerImplementationTest.consume_invalidJson_shouldNotCrash" />
+        <item itemvalue="JUnit.ListenerImplementationTest.consume_orderPaymentEvent_success" />
+        <item itemvalue="JUnit.ListenerImplementationTest.consume_paymentFailedEvent_success" />
         <item itemvalue="JUnit.OrderServiceImplTest" />
-        <item itemvalue="JUnit.OrderServiceImplTest.cancelOrder_orderNotFound" />
-        <item itemvalue="JUnit.OrderServiceImplTest.cancelOrder_success" />
-        <item itemvalue="JUnit.OrderServiceImplTest.completeOrder_notFound" />
-        <item itemvalue="JUnit.OrderServiceImplTest.completeOrder_success" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +293,7 @@
       <workItem from="1756832568164" duration="7635000" />
       <workItem from="1756916132751" duration="6824000" />
       <workItem from="1756977222934" duration="8928000" />
-      <workItem from="1757574073204" duration="13505000" />
+      <workItem from="1757574073204" duration="15769000" />
     </task>
     <servers />
   </component>
@@ -322,6 +328,21 @@
           <url>file://$PROJECT_DIR$/common-proto/src/main/java/com/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar!/com/fasterxml/jackson/databind/ObjectMapper.class</url>
+          <line>1518</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
