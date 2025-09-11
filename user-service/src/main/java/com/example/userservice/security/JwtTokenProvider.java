@@ -15,10 +15,10 @@ import java.util.function.Function;
 
 @Service
 public class JwtTokenProvider {
-    @Value("${security.jwt.secret}")
+    @Value("${spring.security.jwt.secret}")
     private String jwtSecret;
 
-    @Value("${security.jwt.expiration-ms}")
+    @Value("${spring.security.jwt.expiration-ms}")
     private long jwtExpirationMs;
 
     private Key key;

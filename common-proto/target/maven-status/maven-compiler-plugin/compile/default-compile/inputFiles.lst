@@ -1,6 +1,10 @@
 C:\Users\User\Downloads\Order Management System\common-proto\src\main\java\com\example\Main.java
 C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\grpc-java\com\example\userproto\UserServiceGrpc.java
+C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\FavoriteProductRequest.java
+C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\FavoriteProductRequestOrBuilder.java
 C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\NotificationChannel.java
+C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\UserListResponse.java
+C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\UserListResponseOrBuilder.java
 C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\UserRequest.java
 C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\UserRequestOrBuilder.java
 C:\Users\User\Downloads\Order Management System\common-proto\target\generated-sources\protobuf\java\com\example\userproto\UserResponse.java

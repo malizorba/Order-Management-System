@@ -1,6 +1,7 @@
 package com.example.userservice.Entity;
 
 import com.example.common.Entity.BaseEntity;
+import com.example.userproto.NotificationChannel;
 import com.example.userservice.DTO.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

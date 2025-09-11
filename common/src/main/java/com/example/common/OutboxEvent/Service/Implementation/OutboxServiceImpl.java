@@ -31,7 +31,6 @@ public class OutboxServiceImpl implements IOutboxService {
 
     @Override
     @Scheduled(fixedDelay = 5000) // 5 saniyede bir çalışır
-    @Transactional
     public void
     publishPendingEvents() {
         List<OutboxEventEntity> events = outboxEventRepository.findBySentFalse();

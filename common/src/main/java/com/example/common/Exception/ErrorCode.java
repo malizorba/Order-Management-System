@@ -14,8 +14,8 @@ public enum ErrorCode {
     USER_NOT_FOUND("USER_002", "User not found"),
     INVALID_CREDENTIALS("USER_003", "Invalid credentials");
 
-    private final String code;
-    private final String message;
+    public final String code;
+    public final String message;
 
     ErrorCode(String code, String message) {
         this.code = code;

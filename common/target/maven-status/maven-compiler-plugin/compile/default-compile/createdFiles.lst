@@ -7,8 +7,13 @@ com\example\common\Exception\ErrorCode.class
 com\example\common\Event\StockAvailableEvent.class
 com\example\common\Exception\BusinessException.class
 com\example\common\OutboxEvent\Repository\OutboxEventRepository.class
+com\example\common\Event\OrderCreatedEvent.class
+com\example\common\Event\OrderValidatedEvent.class
 com\example\common\Entity\OutboxEventEntity.class
 com\example\common\Exception\GlobalExceptionHandler.class
+com\example\common\Event\OrderPaymentEvent.class
+com\example\common\Event\OrderCreatedEvent$Item.class
+com\example\common\Event\PaymentFailedEvent.class
 com\example\common\Entity\BaseEntity.class
 com\example\common\OutboxEvent\Constants$EventType.class
 com\example\common\OutboxEvent\Service\IOutboxService.class

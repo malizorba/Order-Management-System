@@ -1,15 +1,22 @@
 package com.example.userservice.Service.grpc;
 
-import com.example.userproto.UserRequest;
-import com.example.userproto.UserResponse;
-import com.example.userproto.UserServiceGrpc;
+import com.example.userproto.*;
+import com.example.userservice.Entity.FavoriteProductEntity;
+import com.example.userservice.Repository.FavoritePRoductRepository;
 import com.example.userservice.Repository.UserRepository;
 import com.example.userservice.Entity.UserEntity;
 import com.google.protobuf.Empty;
+import io.grpc.ManagedChannel;
+import io.grpc.Metadata;
 import io.grpc.Status;
+import io.grpc.stub.MetadataUtils;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.UUID;
 
 import static com.example.userservice.security.AuthInterceptor.USER_EMAIL_CTX_KEY;
 
@@ -19,7 +26,14 @@ public class UserGrpcService extends UserServiceGrpc.UserServiceImplBase {
 
     private final UserRepository userRepository;
 
-    @Override
+
+    //private final ManagedChannel userServiceChannel;
+
+    private final FavoritePRoductRepository favoritePRoductRepository;
+
+    //private final UserServiceGrpc.UserServiceBlockingStub userServiceStub;
+
+
     public void getUserByEmail(Empty request, StreamObserver<UserResponse> responseObserver) {
         String email = USER_EMAIL_CTX_KEY.get();
 
@@ -42,5 +56,43 @@ public class UserGrpcService extends UserServiceGrpc.UserServiceImplBase {
 
         responseObserver.onNext(response);
         responseObserver.onCompleted();
+    }
+
+
+//    public UserResponse getUserByToken(String jwtToken) {
+//        // Metadata oluştur
+//        Metadata metadata = new Metadata();
+//        Metadata.Key<String> AUTH_HEADER = Metadata.Key.of("Authorization", Metadata.ASCII_STRING_MARSHALLER);
+//        metadata.put(AUTH_HEADER, "Bearer " + jwtToken);
+//
+//        // Stub + Interceptor
+//        UserServiceGrpc.UserServiceBlockingStub stubWithJwt =
+//                UserServiceGrpc.newBlockingStub(userServiceChannel)
+//                        .withInterceptors(MetadataUtils.newAttachHeadersInterceptor(metadata));
+//
+//        // gRPC çağrısı
+//        return stubWithJwt.getUserByToken(Empty.getDefaultInstance());
+//    }
+    public void getUsersByFavoriteProduct(FavoriteProductRequest request, StreamObserver<UserListResponse> responseObserver){
+
+        List<FavoriteProductEntity> favorites = favoritePRoductRepository.findAllByProductId(UUID.fromString(request.getProductId()));
+
+        UserListResponse.Builder listBuilder = UserListResponse.newBuilder();
+
+        for(FavoriteProductEntity fav : favorites){
+            userRepository.findById(fav.getUserId()).ifPresent(user ->{
+                UserResponse userResponse=UserResponse.newBuilder()
+                        .setEmail(user.getEmail())
+                        .setFullName(user.getFullName())
+                        .setPhoneNumber(user.getPhoneNumber())
+                        .setPreferredChannel(
+                                NotificationChannel.valueOf(user.getPreferredChannel().name())
+                        )
+                        .build();
+                listBuilder.addUsers(userResponse);
+            });
+            responseObserver.onNext(listBuilder.build());
+            responseObserver.onCompleted();
+        }
     }
 }

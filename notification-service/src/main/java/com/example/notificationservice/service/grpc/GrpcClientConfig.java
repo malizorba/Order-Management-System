@@ -15,6 +15,10 @@ public class GrpcClientConfig {
                 .usePlaintext()
                 .build();
     }
+    @Bean
+    public UserServiceGrpc.UserServiceBlockingStub userServiceBlockingStub(ManagedChannel userServiceChannel) {
+        return UserServiceGrpc.newBlockingStub(userServiceChannel);
+    }
 
 
 }

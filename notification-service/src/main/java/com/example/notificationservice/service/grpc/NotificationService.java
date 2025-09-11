@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class NotificationService {
+
 //    private final List<INotificationSender> notificationSenders;
 //    private final UserGrpcClient userGrpcClient; // gRPC ile kullanıcı verisi alacağız
 //

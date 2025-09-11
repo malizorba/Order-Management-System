@@ -10,6 +10,9 @@ import "google/protobuf/empty.proto";
 
 service UserService {
   rpc GetUserByToken(google.protobuf.Empty) returns (UserResponse);
+
+  // Yeni eklenen metod: FavoriteProductId vererek kullanıcı listesi alma
+  rpc GetUsersByFavoriteProduct(FavoriteProductRequest) returns (UserListResponse);
 }
 
 message UserRequest {
@@ -25,4 +28,12 @@ message UserResponse {
   string fullName = 2;
   string phoneNumber = 3;
   NotificationChannel preferredChannel = 4;
+}
+
+message FavoriteProductRequest {
+  string productId = 1;
+}
+
+message UserListResponse {
+  repeated UserResponse users = 1;
 }

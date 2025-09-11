@@ -1,7 +1,9 @@
 package com.example.notificationservice.service.grpc;
 
 import com.example.notificationservice.NotificationChannel;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SmsNotificationSender implements INotificationSender {
 
     @Override

@@ -18,7 +18,6 @@
         <module>payment-service</module>
         <module>user-service</module>
         <module>common-proto</module>
-
     </modules>
 
     <properties>

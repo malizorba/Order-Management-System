@@ -2,6 +2,7 @@ package com.example.userservice.Service.Implementation;
 
 import com.example.common.Exception.BusinessException;
 import com.example.common.Exception.ErrorCode;
+import com.example.userproto.NotificationChannel;
 import com.example.userservice.DTO.Request.AuthRequest;
 import com.example.userservice.DTO.Response.AuthResponse;
 import com.example.userservice.DTO.UserDto;
@@ -36,7 +37,8 @@ public class UserServiceImpl implements IUserService {
                 .email(userDto.getEmail())
                 .password(passwordEncoder.encode(userDto.getPassword()))
                 .phoneNumber(userDto.getPhoneNumber())
-                .role(UserRole.USER) // 🛡️ Sabit olarak USER atanıyor
+                .role(UserRole.USER) //🛡️ Sabit olarak USER atanıyor
+                .preferredChannel(NotificationChannel.EMAIL)
                 .build();
 
         userRepository.save(user);
@@ -65,7 +67,7 @@ public class UserServiceImpl implements IUserService {
     }
     private AuthResponse generateToken(UserEntity user) {
         Map<String, Object> claims = Map.of("role", user.getRole());
-        String token = jwtTokenProvider.generateToken(user.getEmail(),claims);
+        String token = jwtTokenProvider.generateToken(String.valueOf(user.getId()),claims);
         return new AuthResponse(token);
     }
 }

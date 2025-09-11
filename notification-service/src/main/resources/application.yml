@@ -14,17 +14,7 @@ spring:
       properties:
         spring.json.trusted.packages: '*'
 
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: malizorbaa.33@gmail.com
-    password: mvdi xiov gmxz pobk
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
+
   grpc:
     client:
       user-service:

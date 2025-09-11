@@ -25,6 +25,16 @@ public final class UserServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_UserResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_FavoriteProductRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_FavoriteProductRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_UserListResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_UserListResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -39,11 +49,16 @@ public final class UserServiceProto {
       " \001(\t\"y\n\014UserResponse\022\r\n\005email\030\001 \001(\t\022\020\n\010f" +
       "ullName\030\002 \001(\t\022\023\n\013phoneNumber\030\003 \001(\t\0223\n\020pr" +
       "eferredChannel\030\004 \001(\0162\031.user.Notification" +
-      "Channel*)\n\023NotificationChannel\022\t\n\005EMAIL\020" +
-      "\000\022\007\n\003SMS\020\0012K\n\013UserService\022<\n\016GetUserByTo" +
-      "ken\022\026.google.protobuf.Empty\032\022.user.UserR" +
-      "esponseB+\n\025com.example.userprotoB\020UserSe" +
-      "rviceProtoP\001b\006proto3"
+      "Channel\"+\n\026FavoriteProductRequest\022\021\n\tpro" +
+      "ductId\030\001 \001(\t\"5\n\020UserListResponse\022!\n\005user" +
+      "s\030\001 \003(\0132\022.user.UserResponse*)\n\023Notificat" +
+      "ionChannel\022\t\n\005EMAIL\020\000\022\007\n\003SMS\020\0012\236\001\n\013UserS" +
+      "ervice\022<\n\016GetUserByToken\022\026.google.protob" +
+      "uf.Empty\032\022.user.UserResponse\022Q\n\031GetUsers" +
+      "ByFavoriteProduct\022\034.user.FavoriteProduct" +
+      "Request\032\026.user.UserListResponseB+\n\025com.e" +
+      "xample.userprotoB\020UserServiceProtoP\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62,6 +77,18 @@ public final class UserServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_UserResponse_descriptor,
         new java.lang.String[] { "Email", "FullName", "PhoneNumber", "PreferredChannel", });
+    internal_static_user_FavoriteProductRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_user_FavoriteProductRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_FavoriteProductRequest_descriptor,
+        new java.lang.String[] { "ProductId", });
+    internal_static_user_UserListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_user_UserListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_UserListResponse_descriptor,
+        new java.lang.String[] { "Users", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

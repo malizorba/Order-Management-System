@@ -5,7 +5,8 @@ import com.example.common.OutboxEvent.Constants;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class EventFactory {
+public class
+EventFactory {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public static OutboxEventEntity createOutboxEvent(

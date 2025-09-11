@@ -46,6 +46,37 @@ public final class UserServiceGrpc {
     return getGetUserByTokenMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.example.userproto.FavoriteProductRequest,
+      com.example.userproto.UserListResponse> getGetUsersByFavoriteProductMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUsersByFavoriteProduct",
+      requestType = com.example.userproto.FavoriteProductRequest.class,
+      responseType = com.example.userproto.UserListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.userproto.FavoriteProductRequest,
+      com.example.userproto.UserListResponse> getGetUsersByFavoriteProductMethod() {
+    io.grpc.MethodDescriptor<com.example.userproto.FavoriteProductRequest, com.example.userproto.UserListResponse> getGetUsersByFavoriteProductMethod;
+    if ((getGetUsersByFavoriteProductMethod = UserServiceGrpc.getGetUsersByFavoriteProductMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getGetUsersByFavoriteProductMethod = UserServiceGrpc.getGetUsersByFavoriteProductMethod) == null) {
+          UserServiceGrpc.getGetUsersByFavoriteProductMethod = getGetUsersByFavoriteProductMethod =
+              io.grpc.MethodDescriptor.<com.example.userproto.FavoriteProductRequest, com.example.userproto.UserListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUsersByFavoriteProduct"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.userproto.FavoriteProductRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.userproto.UserListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetUsersByFavoriteProduct"))
+              .build();
+        }
+      }
+    }
+    return getGetUsersByFavoriteProductMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,16 @@ public final class UserServiceGrpc {
         io.grpc.stub.StreamObserver<com.example.userproto.UserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserByTokenMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Yeni eklenen metod: FavoriteProductId vererek kullanıcı listesi alma
+     * </pre>
+     */
+    default void getUsersByFavoriteProduct(com.example.userproto.FavoriteProductRequest request,
+        io.grpc.stub.StreamObserver<com.example.userproto.UserListResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUsersByFavoriteProductMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +177,17 @@ public final class UserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUserByTokenMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Yeni eklenen metod: FavoriteProductId vererek kullanıcı listesi alma
+     * </pre>
+     */
+    public void getUsersByFavoriteProduct(com.example.userproto.FavoriteProductRequest request,
+        io.grpc.stub.StreamObserver<com.example.userproto.UserListResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetUsersByFavoriteProductMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -159,6 +211,16 @@ public final class UserServiceGrpc {
     public com.example.userproto.UserResponse getUserByToken(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserByTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Yeni eklenen metod: FavoriteProductId vererek kullanıcı listesi alma
+     * </pre>
+     */
+    public com.example.userproto.UserListResponse getUsersByFavoriteProduct(com.example.userproto.FavoriteProductRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetUsersByFavoriteProductMethod(), getCallOptions(), request);
     }
   }
 
@@ -185,9 +247,21 @@ public final class UserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUserByTokenMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Yeni eklenen metod: FavoriteProductId vererek kullanıcı listesi alma
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.userproto.UserListResponse> getUsersByFavoriteProduct(
+        com.example.userproto.FavoriteProductRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetUsersByFavoriteProductMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER_BY_TOKEN = 0;
+  private static final int METHODID_GET_USERS_BY_FAVORITE_PRODUCT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,6 +283,10 @@ public final class UserServiceGrpc {
         case METHODID_GET_USER_BY_TOKEN:
           serviceImpl.getUserByToken((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.example.userproto.UserResponse>) responseObserver);
+          break;
+        case METHODID_GET_USERS_BY_FAVORITE_PRODUCT:
+          serviceImpl.getUsersByFavoriteProduct((com.example.userproto.FavoriteProductRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.userproto.UserListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -235,6 +313,13 @@ public final class UserServiceGrpc {
               com.google.protobuf.Empty,
               com.example.userproto.UserResponse>(
                 service, METHODID_GET_USER_BY_TOKEN)))
+        .addMethod(
+          getGetUsersByFavoriteProductMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.example.userproto.FavoriteProductRequest,
+              com.example.userproto.UserListResponse>(
+                service, METHODID_GET_USERS_BY_FAVORITE_PRODUCT)))
         .build();
   }
 
@@ -284,6 +369,7 @@ public final class UserServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new UserServiceFileDescriptorSupplier())
               .addMethod(getGetUserByTokenMethod())
+              .addMethod(getGetUsersByFavoriteProductMethod())
               .build();
         }
       }
