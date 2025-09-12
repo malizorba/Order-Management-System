@@ -1,12 +1,14 @@
 com\example\userservice\Repository\UserRepository.class
 com\example\userservice\security\JwtAuthenticationFilter.class
 com\example\userservice\DTO\UserDto$UserDtoBuilder.class
+com\example\userservice\config\GrpcSecurityConfig$1.class
 com\example\userservice\Service\grpc\UserGrpcService.class
 com\example\userservice\DTO\Request\AuthRequest.class
 com\example\userservice\security\JwtTokenProvider.class
 com\example\userservice\Controller\AuthController.class
 com\example\userservice\Entity\UserEntity$UserEntityBuilder.class
 com\example\userservice\security\AuthInterceptor.class
+com\example\userservice\config\GrpcSecurityConfig.class
 com\example\userservice\DTO\Request\FavoriteProductRequest$FavoriteProductRequestBuilder.class
 com\example\userservice\Repository\FavoritePRoductRepository.class
 com\example\userservice\Service\CustomUserDetailsService.class

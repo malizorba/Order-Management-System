@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Order-Service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order-Service/src/test/java/com/example/orderservice/Controller/OrderControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/test-classes/com/example/orderservice/Service/Implementation/OrderServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/test-classes/com/example/orderservice/Service/Implementation/OrderServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/order-service-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/order-service-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/test-classes/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/test-classes/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/target/user-service-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/user-service-1.0.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,8 @@
     "JUnit.ListenerImplementationTest.consume_orderPaymentEvent_success.executor": "Run",
     "JUnit.ListenerImplementationTest.consume_paymentFailedEvent_success.executor": "Debug",
     "JUnit.ListenerImplementationTest.executor": "Coverage",
+    "JUnit.OrderControllerTest.createOrder_ShouldReturnOrderResponse.executor": "Run",
+    "JUnit.OrderControllerTest.executor": "Run",
     "JUnit.OrderServiceImplTest.cancelOrder_orderNotFound.executor": "Run",
     "JUnit.OrderServiceImplTest.cancelOrder_success.executor": "Run",
     "JUnit.OrderServiceImplTest.completeOrder_notFound.executor": "Run",
@@ -65,8 +73,10 @@
     "Maven.common-proto [clean,install].executor": "Run",
     "Maven.inventory-service [clean,install].executor": "Run",
     "Maven.notification-service [clean,install].executor": "Run",
+    "Maven.order-management-system [clean,install...].executor": "Run",
     "Maven.order-management-system [clean,install].executor": "Run",
     "Maven.order-management-system [flyway:repair].executor": "Run",
+    "Maven.order-service [clean,install].executor": "Run",
     "Maven.user-service [clean,install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -118,6 +128,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.orderservice.Controller" />
       <recent name="com.example.orderservice.Listener.Implementation" />
       <recent name="com.example.orderservice.Service.Implementation" />
     </key>
@@ -130,6 +141,7 @@
       <command value="./mvnw flyway:repair" />
       <command value="flyway:repair" />
       <command value="mvn flyway:repair" />
+      <command value="mvn clean install -DskipTests" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -142,7 +154,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ListenerImplementationTest">
+  <component name="RunManager" selected="JUnit.OrderControllerTest">
     <configuration name="ListenerImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
@@ -190,33 +202,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListenerImplementationTest.consume_paymentFailedEvent_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.orderservice.Listener.Implementation.*" />
+          <option name="PATTERN" value="com.example.orderservice.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.orderservice.Listener.Implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Listener.Implementation.ListenerImplementationTest" />
-      <option name="METHOD_NAME" value="consume_paymentFailedEvent_success" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Controller.OrderControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderControllerTest.createOrder_ShouldReturnOrderResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.orderservice.Service.Implementation.*" />
+          <option name="PATTERN" value="com.example.orderservice.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.orderservice.Service.Implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Service.Implementation.OrderServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.example.orderservice.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderservice.Controller.OrderControllerTest" />
+      <option name="METHOD_NAME" value="createOrder_ShouldReturnOrderResponse" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -251,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderControllerTest" />
+        <item itemvalue="JUnit.OrderControllerTest.createOrder_ShouldReturnOrderResponse" />
         <item itemvalue="JUnit.ListenerImplementationTest" />
         <item itemvalue="JUnit.ListenerImplementationTest.consume_invalidJson_shouldNotCrash" />
         <item itemvalue="JUnit.ListenerImplementationTest.consume_orderPaymentEvent_success" />
-        <item itemvalue="JUnit.ListenerImplementationTest.consume_paymentFailedEvent_success" />
-        <item itemvalue="JUnit.OrderServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +308,8 @@
       <workItem from="1756832568164" duration="7635000" />
       <workItem from="1756916132751" duration="6824000" />
       <workItem from="1756977222934" duration="8928000" />
-      <workItem from="1757574073204" duration="15769000" />
+      <workItem from="1757574073204" duration="16133000" />
+      <workItem from="1757667527854" duration="11665000" />
     </task>
     <servers />
   </component>
@@ -334,13 +347,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java</url>
-          <line>40</line>
+          <line>41</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar!/com/fasterxml/jackson/databind/ObjectMapper.class</url>
@@ -353,6 +361,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Order_Management_System$OrderServiceImplTest.ic" NAME="OrderServiceImplTest Coverage Results" MODIFIED="1757619333214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.example.orderservice.Service.Implementation.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Order_Management_System$ListenerImplementationTest.ic" NAME="ListenerImplementationTest Coverage Results" MODIFIED="1757621988201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.example.orderservice.Listener.Implementation.*</FILTER>
     </SUITE>
   </component>
 </project>
