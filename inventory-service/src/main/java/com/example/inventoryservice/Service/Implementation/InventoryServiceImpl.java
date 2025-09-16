@@ -43,6 +43,7 @@ public class InventoryServiceImpl implements InventoryService {
     private final ObjectMapper objectMapper;
     private final ReservationRepository reservationRepository;
     private final OutboxServiceImpl outboxService;
+    private final OutboxEventRepository outboxEventRepository;
 
 
     @Override
@@ -143,8 +144,8 @@ public class InventoryServiceImpl implements InventoryService {
             reservationRepository.save(reservation);
 
             // Outbox'a stok rezerve edildi olayını yaz
-            EventFactory.createOutboxEvent(Constants.AggregateType.ORDER, Constants.EventType.ORDER_VALIDATED, String.valueOf(event.getOrderId()),orderValidatedEvent);
-
+            OutboxEventEntity outboxEvent = EventFactory.createOutboxEvent(Constants.AggregateType.ORDER, Constants.EventType.ORDER_VALIDATED, String.valueOf(event.getOrderId()),orderValidatedEvent);
+            outboxEventRepository.save(outboxEvent);
             log.info("Stok rezerve edildi: OrderId={}, ProductId={}, Miktar={}",
                     event.getOrderId(), productId, requestedQuantity);
         }

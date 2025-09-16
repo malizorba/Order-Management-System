@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/OutboxEvent/Service/Implementation/OutboxServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github/workflows/ci-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci-cd.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/OrderServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/com/example/orderservice/OrderServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/target/classes/com/example/paymentservice/PaymentServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/target/classes/com/example/paymentservice/PaymentServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/example/inventoryservice/Service/Implementation/InventoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +304,7 @@
       <workItem from="1756977222934" duration="8928000" />
       <workItem from="1757574073204" duration="16133000" />
       <workItem from="1757667527854" duration="16793000" />
-      <workItem from="1758022836889" duration="1834000" />
+      <workItem from="1758022836889" duration="6887000" />
     </task>
     <servers />
   </component>
@@ -354,16 +344,6 @@
           <url>file://$PROJECT_DIR$/order-service/src/test/java/com/example/orderservice/Listener/Implementation/ListenerImplementationTest.java</url>
           <line>41</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/Controller/OrderController.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/example/orderservice/Service/Implementation/OrderServiceImpl.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
