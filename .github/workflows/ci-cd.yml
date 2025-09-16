@@ -2,23 +2,28 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      # 1️⃣ Repo checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Multi-module Maven için kritik
 
+      # 2️⃣ JDK kurulumu
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
 
+      # 3️⃣ Maven cache
       - name: Cache Maven packages
         uses: actions/cache@v4
         with:
@@ -26,11 +31,15 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven
 
+      # 4️⃣ Maven build (parent pom dizini belirtilmeli)
       - name: Build all services with Maven
         run: mvn clean install -DskipTests
+        working-directory: ./Order-Management-System  # parent pom dizini
 
+      # 5️⃣ Unit & integration test
       - name: Run Unit & Integration Tests
         run: mvn test
+        working-directory: ./Order-Management-System
 
   docker-build:
     needs: build-test
@@ -39,17 +48,22 @@ jobs:
       matrix:
         service: [order-service, inventory-service, payment-service, user-service, notification-service]
     steps:
-      - name: Checkout code
+      # 1️⃣ Repo checkout (her job ayrı context)
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # 2️⃣ Docker Hub login
       - name: Log in to DockerHub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
+      # 3️⃣ Docker image build & push
       - name: Build and push Docker image
         run: |
-          echo " Building image for ${{ matrix.service }}"
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} ./\${{ matrix.service }}
+          echo "Building image for ${{ matrix.service }}"
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} ./Order-Management-System/${{ matrix.service }}
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}

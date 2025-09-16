@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci-cd.yml" afterDir="false" />
-    </list>
+    <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -303,7 +301,7 @@
       <workItem from="1756977222934" duration="8928000" />
       <workItem from="1757574073204" duration="16133000" />
       <workItem from="1757667527854" duration="16793000" />
-      <workItem from="1758022836889" duration="7498000" />
+      <workItem from="1758022836889" duration="7861000" />
     </task>
     <servers />
   </component>
