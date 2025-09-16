@@ -40,6 +40,7 @@ public class OutboxServiceImpl implements IOutboxService {
                 kafkaTemplate.send(event.getEventType(), event.getAggregateId().toString(), event.getPayload());
                 event.setSent(true);
                 event.setUpdatedAt(Instant.now());
+                outboxEventRepository.save(event);
                 log.info("Kafka'ya gönderildi: {}", event.getAggregateId());
             } catch (Exception e) {
                 log.error("Kafka'ya gönderim hatası: {}", event.getAggregateId(), e);

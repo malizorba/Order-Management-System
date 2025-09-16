@@ -11,9 +11,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "com.example.common"
 })
 
-@EntityScan(basePackages = {"package com.example.Entity"})
+@EntityScan(basePackages = {"package com.example.common.Entity"})
 @EnableJpaRepositories(basePackages = {
         "com.example.common.OutboxEvent.Repository",
+        "com.example.common.OutboxEvent.Repository"
 
 })
 public class PaymentServiceApplication {
