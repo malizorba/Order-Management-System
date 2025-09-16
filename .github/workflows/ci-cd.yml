@@ -34,12 +34,12 @@ jobs:
       # 4️⃣ Maven build (parent pom dizini belirtilmeli)
       - name: Build all services with Maven
         run: mvn clean install -DskipTests
-        working-directory: ./Order-Management-System  # parent pom dizini
+          # parent pom dizini
 
       # 5️⃣ Unit & integration test
       - name: Run Unit & Integration Tests
         run: mvn test
-        working-directory: ./Order-Management-System
+
 
   docker-build:
     needs: build-test
