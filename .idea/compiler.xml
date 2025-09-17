@@ -11,10 +11,12 @@
         <module name="payment-service" />
         <module name="common" />
         <module name="common-proto" />
-        <module name="order-service" />
         <module name="user-service" />
         <module name="notification-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="order-service" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
