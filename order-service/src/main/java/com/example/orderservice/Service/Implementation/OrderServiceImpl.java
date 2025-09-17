@@ -87,6 +87,7 @@ public class OrderServiceImpl implements IOrderService {
                 event
         );
         outBoxRepository.save(outboxEvent);
+        // save edildi
 
         // 6. Yanıt döndür
         return OrderResponse.builder()
