@@ -24,6 +24,11 @@ jobs:
       - name: Build all services with Maven
         run: mvn clean package -DskipTests
 
+      - name: List built JARs
+        run: |
+          pwd
+          ls -R
+
       # Artifact olarak JAR dosyalarını upload et
       - name: Upload service JARs
         uses: actions/upload-artifact@v4
@@ -35,6 +40,11 @@ jobs:
             payment-service/target/*.jar
             user-service/target/*.jar
             notification-service/target/*.jar
+
+      - name: List upload JARs
+        run: |
+          pwd
+          ls -R
 
   docker-build-push:
     needs: build-test
