@@ -40,13 +40,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-      - name: Print Working Directory and List Files
+
+      - name: Debug - List files
         run: |
-            pwd
-            ls -l
+          echo "Current directory: $PWD"
+          ls -R
 
       - name: Build and Push Docker Image
-        working-directory: ${{ github.workspace }}
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} ./Order-Management-System/${{ matrix.service }}
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} "${{ github.workspace }}/Order-Management-System/${{ matrix.service }}"
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
