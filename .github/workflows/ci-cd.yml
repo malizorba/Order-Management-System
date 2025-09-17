@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Multi-module Maven için kritik
+          fetch-depth: 0
 
       # 2️⃣ JDK kurulumu
       - name: Set up JDK 21
@@ -31,15 +31,15 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven
 
-      # 4️⃣ Maven build (parent pom dizini belirtilmeli)
+      # 4️⃣ Maven build (parent pom dizini belirtiliyor)
       - name: Build all services with Maven
         run: mvn clean install -DskipTests
-          # parent pom dizini
+        working-directory: ./Order-Management-System
 
-      # 5️⃣ Unit & integration test
+      # 5️⃣ Testler
       - name: Run Unit & Integration Tests
         run: mvn test
-
+        working-directory: ./Order-Management-System
 
   docker-build:
     needs: build-test
@@ -48,7 +48,7 @@ jobs:
       matrix:
         service: [order-service, inventory-service, payment-service, user-service, notification-service]
     steps:
-      # 1️⃣ Repo checkout (her job ayrı context)
+      # 1️⃣ Repo checkout
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -61,9 +61,9 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
-      # 3️⃣ Docker image build & push
+      # 3️⃣ Docker build & push
       - name: Build and push Docker image
         run: |
           echo "Building image for ${{ matrix.service }}"
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}${{ matrix.service }}
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} ./Order-Management-System/${{ matrix.service }}
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
