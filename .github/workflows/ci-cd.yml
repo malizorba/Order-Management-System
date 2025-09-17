@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: [order-service, inventory-service, payment-service, user-service, notification-service]
+        service: [order-service, inventory-service, payment-service, user-service, notification-service,common,common-proto]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
