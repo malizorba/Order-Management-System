@@ -39,7 +39,7 @@ class OrderControllerTest {
     @MockBean
     private IOrderService orderService;
 
-
+//integration-test
 
     @Test
     void createOrder_ShouldReturnOrderResponse() throws Exception {
