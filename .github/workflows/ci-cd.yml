@@ -77,5 +77,13 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           echo "Building Docker image for ${{ matrix.service }}"
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}./${{ matrix.service }}
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}./order-service/${{ matrix.service }}
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
+    
+      - name: Build and Push Docker Image
+        run: |
+          echo "Building Docker image for ${{ matrix.service }}"
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}./inventory-service/${{ matrix.service }}
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
+
+          
