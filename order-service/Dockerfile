@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 
 # Maven build sonrası JAR dosyasını kopyala
-COPY target/order-service.jar app.jar
+COPY target/order-service-1.0.0.jar app.jar
 
 # Container çalıştırıldığında JAR'ı çalıştır
 ENTRYPOINT ["java", "-jar", "app.jar"]
