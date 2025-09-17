@@ -30,11 +30,11 @@ jobs:
         with:
           name: service-jars
           path: |
-            Order-Management-System/order-service/target/order-service.jar
-            Order-Management-System/inventory-service/target/inventory-service.jar
-            Order-Management-System/payment-service/target/payment-service.jar
-            Order-Management-System/user-service/target/user-service.jar
-            Order-Management-System/notification-service/target/notification-service.jar
+            Order-Management-System/order-service/target/*.jar
+            Order-Management-System/inventory-service/target/*.jar
+            Order-Management-System/payment-service/target/*.jar
+            Order-Management-System/user-service/target/*.jar
+            Order-Management-System/notification-service/target/*.jar
 
   docker-build-push:
     needs: build-test
