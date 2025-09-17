@@ -46,6 +46,7 @@ jobs:
             ls -l
 
       - name: Build and Push Docker Image
+        working-directory: ${{ github.workspace }}
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} ./Order-Management-System/${{ matrix.service }}
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
