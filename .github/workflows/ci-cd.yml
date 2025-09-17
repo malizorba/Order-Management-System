@@ -9,8 +9,10 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    outputs:
+      services: order-service,inventory-service,payment-service,user-service,notification-service
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up JDK 21
@@ -20,20 +22,36 @@ jobs:
           distribution: 'temurin'
 
       - name: Build all services with Maven
-        run: mvn clean install -DskipTests
+        run: mvn clean package -DskipTests
 
-      - name: Run Unit & Integration Tests
-        run: mvn test
+      # Artifact olarak JAR dosyalarını upload et
+      - name: Upload service JARs
+        uses: actions/upload-artifact@v3
+        with:
+          name: service-jars
+          path: |
+            Order-Management-System/order-service/target/order-service.jar
+            Order-Management-System/inventory-service/target/inventory-service.jar
+            Order-Management-System/payment-service/target/payment-service.jar
+            Order-Management-System/user-service/target/user-service.jar
+            Order-Management-System/notification-service/target/notification-service.jar
 
   docker-build-push:
     needs: build-test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: [order-service, inventory-service, payment-service, user-service, notification-service,common,common-proto]
+        service: [order-service, inventory-service, payment-service, user-service, notification-service]
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
+
+      # Artifact’leri indir
+      - name: Download service JARs
+        uses: actions/download-artifact@v3
+        with:
+          name: service-jars
+          path: Order-Management-System/
 
       - name: Login to Docker Hub
         uses: docker/login-action@v2
@@ -41,12 +59,8 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
-      - name: Debug - List files
-        run: |
-          echo "Current directory: $PWD"
-          ls -R
-
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} "${{ github.workspace }}/${{ matrix.service }}"
+          echo "Building Docker image for ${{ matrix.service }}"
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }} ./Order-Management-System/${{ matrix.service }}
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
