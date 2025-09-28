@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="inventory-service" />
         <module name="payment-service" />
+        <module name="discovery-server" />
         <module name="common" />
         <module name="common-proto" />
         <module name="user-service" />
