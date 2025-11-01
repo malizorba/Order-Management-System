@@ -10,7 +10,7 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     outputs:
-      services: order-service,inventory-service,payment-service,user-service,notification-service
+      services: order-service,inventory-service,payment-service,user-service,notification-service,discovery-server,api-gateway
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -40,6 +40,9 @@ jobs:
             payment-service/target/*.jar
             user-service/target/*.jar
             notification-service/target/*.jar
+            discovery-server/target/*.jar
+            api-gateway/target/*.jar
+            
 
       - name: List upload JARs
         run: |
@@ -51,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: [order-service, inventory-service, payment-service, user-service, notification-service]
+        service: [order-service, inventory-service, payment-service, user-service, notification-service, discovery-server, api-gateway]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

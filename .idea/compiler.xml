@@ -12,6 +12,7 @@
         <module name="discovery-server" />
         <module name="common" />
         <module name="common-proto" />
+        <module name="api-gateway" />
         <module name="user-service" />
         <module name="order-service" />
         <module name="notification-service" />

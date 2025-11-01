@@ -19,6 +19,7 @@
         <module>user-service</module>
         <module>common-proto</module>
         <module>discovery-server</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>
