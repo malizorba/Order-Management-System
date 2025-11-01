@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c388b03-1004-4639-85ea-5678e3ea2f3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +21,10 @@
       <list>
         <option value="Exception" />
         <option value="JUnit5 Test Class" />
-        <option value="Dockerfile" />
         <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -335,7 +336,7 @@
       <workItem from="1759086889206" duration="2532000" />
       <workItem from="1760128214037" duration="627000" />
       <workItem from="1762020778365" duration="3446000" />
-      <workItem from="1762024451188" duration="4580000" />
+      <workItem from="1762024451188" duration="4943000" />
     </task>
     <servers />
   </component>
