@@ -11,3 +11,34 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        - id: user-service-main
+        - uri: lb://user-service
+        - predicates:
+            - Path=/api/v1/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/auth/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order-service/**
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/notification-service/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification-service/**
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/payment-service/**
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

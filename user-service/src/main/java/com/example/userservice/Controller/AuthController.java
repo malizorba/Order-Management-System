@@ -4,6 +4,7 @@ import com.example.userservice.DTO.Request.AuthRequest;
 import com.example.userservice.DTO.Response.AuthResponse;
 import com.example.userservice.DTO.UserDto;
 import com.example.userservice.Service.IUserService;
+import com.example.userservice.security.JwtTokenProvider;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class AuthController {
     private final IUserService userService;
+    private final JwtTokenProvider jwtTokenProvider;
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody @Valid UserDto userDto) {
@@ -33,6 +35,10 @@ public class AuthController {
         String email = authentication.getName(); // JwtToken içinden gelen kullanıcı email'i
         UserDto user = userService.getUserDetailsByEmail(email);
         return ResponseEntity.ok(user);
+    }
+    @GetMapping("/validate")
+    public ResponseEntity<Boolean> validateToken(@RequestParam String token) {
+        return ResponseEntity.ok(jwtTokenProvider.validateToken(token));
     }
 }
 
