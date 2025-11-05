@@ -16,10 +16,20 @@ spring:
 
 
   grpc:
+    server:
+      enabled: false
     client:
       user-service:
-        address: static://localhost:9090
+        address: static://localhost:9093
         negotiationType: plaintext
+        # Bağlantı yeniden deneme ekleyin
+        enableKeepAlive: true
+        keepAliveWithoutCalls: true
+        retry:
+          enabled: true
+          initialBackoff: 1000ms
+          maxBackoff: 5000ms
+          maxAttempts: 5
 
   eureka:
     client:

@@ -12,18 +12,14 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: user-service-main
-        - uri: lb://user-service
-        - predicates:
-            - Path=/api/v1/**
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/api/auth/**
+            - Path=/api/**
         - id: order-service
           uri: lb://order-service
           predicates:
-            - Path=/order-service/**
+            - Path=/orders/**
         - id: inventory-service
           uri: lb://inventory-service
           predicates:
@@ -39,6 +35,8 @@ spring:
 
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
